@@ -1,0 +1,64 @@
+<a class="add-button" (click)="openAddModal()">Add</a>
+<app-table
+  [headers]=userHead
+  [data]="userList"
+  [dataExtrator]=userHeadKey
+  (edit)="onEdit($event)"
+  (delete)="onDelete($event)"
+  (download)="onDownlaod($event)"
+></app-table>
+
+<!-- Edit Modal -->
+<!-- Modal Overlay -->
+<div class="modal-overlay" *ngIf="showEditModal">
+  <div class="modal-content">
+    <h3>Edit User</h3>
+    <form (ngSubmit)="submitEdit()" #editForm="ngForm">
+      <label for="login_id">Login Id</label>
+      <input type="text" id="login_id" [(ngModel)]="editData.login_id" name="login_id" required disabled/>
+
+      <label for="name">Name </label>
+      <input type="text" id="name" [(ngModel)]="editData.name" name="name" required disabled/>
+
+      <label for="status">Status </label>
+      <select id="status" [(ngModel)]="editData.status" name="status" required>
+        <option value="Y">Active</option>
+        <option value="N">Inactive</option>
+      </select>
+
+      <label for="user_type">User Type </label>
+      <select id="user_type" [(ngModel)]="editData.user_type" name="user_type" required>
+        <option value="ADMIN">Admin</option>
+        <option value="EDITOR">Editor</option>
+        <option value="VIEWER">Viewer</option>
+      </select>
+
+      <label for="username">User Name </label>
+      <input type="text" id="username" [(ngModel)]="editData.username" name="username" required disabled/>
+
+      <div class="modal-actions">
+        <button type="submit">Save</button>
+        <button type="button" (click)="closeModal()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ADD Modal-->
+<div class="model-overlay" *ngIf="showAddModal">
+    <app-add-document (closeModal)="showAddModal = false" (documentAdded)="refreshData()"></app-add-document>
+</div>
+
+<!-- DELETE Modal -->
+<div class="modal-overlay" *ngIf="showDeleteModal">
+  <div class="modal-content">
+    <h3>Delete Document</h3>
+    <form (ngSubmit)="submitDelete()" #editForm="ngForm">
+      <label class="deleteText">Are u sure u want to Delete.</label>      
+      <div class="modal-actions">
+        <button type="submit">Delete</button>
+        <button type="button" (click)="closeModal()">Cancel</button>
+      </div>      
+    </form>
+  </div>
+</div>

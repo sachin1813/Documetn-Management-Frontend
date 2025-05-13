@@ -1,0 +1,48 @@
+<a class="add-button" (click)="openAddModal()">Add</a>
+<app-table
+  [headers]="['Title', 'UploadedBy', 'Status','Description']"
+  [data]="documentList"
+  [dataExtrator]="['title','uploaded_by','status','description']"
+  (edit)="onEdit($event)"
+  (delete)="onDelete($event)"
+  (download)="onDownlaod($event)"
+></app-table>
+
+<!-- Edit Modal -->
+<!-- Modal Overlay -->
+<div class="modal-overlay" *ngIf="showEditModal">
+  <div class="modal-content">
+    <h3>Edit Document</h3>
+    <form (ngSubmit)="submitEdit()" #editForm="ngForm">
+      <label for="title">Title:</label>
+      <input type="text" id="title" [(ngModel)]="editData.title" name="title" required />
+
+      <label for="description">Description:</label>
+      <input type="text" id="description" [(ngModel)]="editData.description" name="description" required />
+
+      <div class="modal-actions">
+        <button type="submit">Save</button>
+        <button type="button" (click)="closeModal()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ADD Modal-->
+<div class="model-overlay" *ngIf="showAddModal">
+    <app-add-document (closeModal)="showAddModal = false" (documentAdded)="refreshData()"></app-add-document>
+</div>
+
+<!-- DELETE Modal -->
+<div class="modal-overlay" *ngIf="showDeleteModal">
+  <div class="modal-content">
+    <h3>Delete Document</h3>
+    <form (ngSubmit)="submitDelete()" #editForm="ngForm">
+      <label class="deleteText">Are u sure u want to Delete.</label>      
+      <div class="modal-actions">
+        <button type="submit">Delete</button>
+        <button type="button" (click)="closeModal()">Cancel</button>
+      </div>      
+    </form>
+  </div>
+</div>

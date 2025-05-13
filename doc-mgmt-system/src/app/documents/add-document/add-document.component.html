@@ -1,0 +1,18 @@
+<div class="modal-content">
+  <h3>Add New Document</h3>
+  <form (ngSubmit)="submitForm()">
+    <label for="title">Title *</label>
+    <input type="text" id="title" [(ngModel)]="title" name="title" required />
+
+    <label for="description">Description *</label>
+    <input type="text" id="description" [(ngModel)]="description" name="description" required />
+
+    <label for="file">Upload File *</label>
+    <input type="file" id="file" (change)="handleFileInput($event)" required />
+
+    <div class="modal-actions">
+      <button type="submit">Upload</button>
+      <button type="button" (click)="close.emit()">Cancel</button>
+    </div>
+  </form>
+</div>

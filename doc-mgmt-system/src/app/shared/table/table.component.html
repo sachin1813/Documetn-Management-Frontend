@@ -1,0 +1,19 @@
+<table class="custom-table">
+  <thead>
+    <tr>
+      <th *ngFor="let header of headers">{{ header }}</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of data">
+      <td *ngFor="let header of dataExtrator">{{ row[header] }}</td>
+      <td>
+        <button (click)="edit.emit(row)" *ngIf="editButtonFlag">Edit</button>
+        <button (click)="delete.emit(row)" *ngIf="deleteButtonFlag">Delete</button>
+        <button (click)="download.emit(row)" *ngIf="downloadButtonFlag">Download</button>
+        <button (click)="ingestion.emit(row)" *ngIf="ingestionButtonFlag">BackGround Task</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

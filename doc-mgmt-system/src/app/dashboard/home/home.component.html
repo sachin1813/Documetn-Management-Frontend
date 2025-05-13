@@ -1,0 +1,29 @@
+<!-- dashboard-layout.component.html -->
+<div class="dashboard-layout">
+  <aside class="sidebar">
+    <!-- Sidebar links -->
+    <nav>
+      <ul>
+        <li><a routerLink="">Home</a></li>
+        <li><a routerLink="users" *ngIf="userRole">Users</a></li>
+        <li><a routerLink="documents" *ngIf="documentRoles">Documents</a></li>
+        <li><a routerLink="ingestionlogs" *ngIf="ingestionRoles">Ingestion Logs</a></li>        
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <div class="user-info-bar">
+        <div class="info-item"><strong> User: </strong>{{userName}}</div>
+        <div class="info-item"><strong> Role: </strong>{{role}}</div>
+        <div class="info-item"><strong> Time: </strong> <span id="system-time">{{systemTime}}</span></div>
+        <div class="info-item">
+            <button class="logout-button" (click)="logout()">
+                <img src="assets/logout-icon.svg" alt="Logout" class="logout-icon" />
+                Logout
+            </button>
+        </div>
+    </div>
+    <router-outlet></router-outlet> <!-- Nested child routes render here -->
+  </main>
+</div>

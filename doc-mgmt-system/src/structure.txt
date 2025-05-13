@@ -1,0 +1,17 @@
+src/
+├── app/
+│   ├── auth/
+│   │   └── login/
+│   ├── dashboard/
+│   │   └── home/
+│   ├── users/
+│   │   ├── user-list/
+│   │   ├── user-detail/
+│   │   └── user-form/
+│   ├── documents/
+│   │   ├── document-list/
+│   │   ├── document-upload/
+│   │   └── document-view/
+│   ├── ingestion/
+│   │   ├── ingestion-trigger/
+│   │   └── ingestion-history/

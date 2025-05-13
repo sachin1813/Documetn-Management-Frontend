@@ -1,0 +1,85 @@
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ecf0f1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.custom-table th {
+  background-color: #34495e;
+  color: #ecf0f1;
+  font-weight: 600;
+}
+
+.custom-table tr:hover {
+  background-color: #f5f8fa;
+}
+
+.custom-table button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.custom-table button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ecf0f1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.custom-table th {
+  background-color: #34495e;
+  color: #ecf0f1;
+  font-weight: 600;
+}
+
+.custom-table tr:hover {
+  background-color: #f5f8fa;
+}
+
+.custom-table button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.custom-table button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
