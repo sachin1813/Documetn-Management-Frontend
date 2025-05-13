@@ -10,5 +10,9 @@ export class CommonService {
   role:any;
   componentType:any;
   constructor() { }
+
+  clearToken() {
+    this.token = '';
+  }
   
 }

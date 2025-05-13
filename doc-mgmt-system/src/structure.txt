@@ -1,17 +1,20 @@
 src/
 ├── app/
 │   ├── auth/
-│   │   └── login/
+│   │   └── login/  #login login 
+│   ├── core/
+│   │   ├── api-service/    #api endpoint calling file    
+│   │   └── constant-service/  #contain values used over complete application
+│   ├── enviroment/
+│   │   └── enviroment config/   #backend connecting details 
+│   ├── shared/
+│   │   └── table/  #re-usable component for table
 │   ├── dashboard/
-│   │   └── home/
+│   │   └── home/   #first screen after login
 │   ├── users/
-│   │   ├── user-list/
-│   │   ├── user-detail/
-│   │   └── user-form/
+│   │   └── usersAddition/ 
 │   ├── documents/
-│   │   ├── document-list/
-│   │   ├── document-upload/
-│   │   └── document-view/
+│   │   └── add documents/
 │   ├── ingestion/
 │   │   ├── ingestion-trigger/
 │   │   └── ingestion-history/
