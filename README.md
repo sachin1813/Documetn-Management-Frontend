@@ -1,109 +1,55 @@
-"# Documetn-Management-Frontend" 
-This is the Angular 17 frontend for the Document Management Platform. It supports user management, document uploads, ingestion tracking, and authentication, with a modular, scalable architecture using standalone components.
+# 📄 Document Management Frontend
 
-🚀 Features
-🔐 Login/Logout Authentication (JWT-based)
+This is the Angular 17 frontend for the **Document Management Platform**. It includes user management, secure login, document uploads, ingestion tracking, and a responsive UI — all built using standalone Angular components and Tailwind CSS.
 
-👥 User Management (CRUD)
+---
 
-📁 Document Upload (local support)
+## 🚀 Features
 
-📊 Ingestion Monitoring
+- 🔐 **Login/Logout Authentication** (JWT-based)
+- 👥 **User Management** (CRUD)
+- 📁 **Document Upload** (local)
+- 📊 **Ingestion Monitoring**
+- 🧩 **Modular Standalone Components**
+- 📱 **Responsive Design** (Mobile/Tablet/Desktop)
+- 🎨 **Styled with CSS**
 
-🧩 Modular standalone components
+---
 
-📱 Fully responsive (mobile/tablet/desktop)
+## 🧑‍💻 Tech Stack
 
-🎨 Styled with CSS
+| Technology     | Version                      |
+|----------------|------------------------------|
+| Angular        | 17+                          |
+| RxJS           | Latest                       |
+| Routing        | `bootstrapApplication()`     |
+| Auth Guard     | `CanActivateFn` based        |
+| Backend API    | FastAPI (JWT + CORS enabled) |
 
-🧑‍💻 Tech Stack
-Technology	Version
-Angular	17+
-RxJS	Latest
-Tailwind CSS	3+
-Standalone API	bootstrapApplication()
-Auth Guard	CanActivateFn based
-Backend API	FastAPI (JWT + CORS enabled)
+---
 
-📁 Folder Structure
-bash
-Copy
-Edit
+## 📁 Folder Structure
+
+```bash
 src/
 ├── app/
-│   ├── auth/
-│   │   └── login/              #login login 
+│   ├── auth/                      # Login module
 │   ├── core/
-│   │   ├── api-service/        #api endpoint calling file    
-│   │   └── constant-service/   #contain values used over complete application
-│   ├── enviroment/
-│   │   └── enviroment config/   #backend connecting details 
+│   │   ├── api-service/          # API service layer
+│   │   └── constant-service/     # Constants used app-wide
+│   ├── environment/              # Environment config
 │   ├── shared/
-│   │   └── table/               #re-usable component for table
+│   │   └── table/                # Reusable table component
 │   ├── dashboard/
-│   │   └── home/                #first screen after login
+│   │   └── home/                 # Dashboard landing
 │   ├── users/
-│   │   └── usersAddition/ 
+│   │   └── usersAddition/        # Add/Edit users
 │   ├── documents/
-│   │   └── add documents/
+│   │   └── add-documents/        # Upload documents
 │   ├── ingestion/
-│   │   ├── ingestion-trigger/
-│   │   └── ingestion-history/
-│   ├── app.config.ts           # Routing & configuration
-│   └── main.ts                 # Bootstrap app
-├── assets/                     # Images, logos, etc.
-└── styles.css                  # Global Tailwind setup
-🛠️ Setup & Run
-1. Install dependencies
-bash
-Copy
-Edit
-npm install
-2. Run the application
-bash
-Copy
-Edit
-ng serve
-App will be available at:
-http://localhost:4200
-
-🔐 Environment Setup
-Create a file called src/environments/environment.ts:
-
-ts
-Copy
-Edit
-export const environment = {
-  production: false,
-  apiBaseUrl: 'http://localhost:8000' // FastAPI backend
-};
-✅ Available Commands
-Command	Description
-ng serve	Run development server
-ng build	Build for production
-ng test	Run unit tests (Jasmine/Karma)
-ng lint	Linting with ESLint
-
-🧪 Testing
-To run unit tests:
-
-bash
-Copy
-Edit
-ng test
-📸 Screenshots
-Include screenshots or gifs of:
-
-Login Page
-
-Document Upload
-
-User Management
-
-✨ TODO
- Ingestion History UI
-
- Role-based UI access
-
- File preview support (PDF/images)
-
+│   │   ├── ingestion-trigger/    # Trigger ingestion
+│   │   └── ingestion-history/    # View history
+│   ├── app.config.ts             # Application bootstrap config
+│   └── main.ts                   # Entry point
+├── assets/                       # Logos, icons, etc.
+└── styles.css                    # Global Tailwind setup
