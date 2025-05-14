@@ -49,8 +49,6 @@ src/
 │   ├── documents/
 │   │   └── add-documents/        # Upload documents
 │   ├── ingestion/
-│   │   ├── ingestion-trigger/    # Trigger ingestion
-│   │   └── ingestion-history/    # View history
 │   ├── app.config.ts             # Application bootstrap config
 │   └── main.ts                   # Entry point
 ├── assets/                       # Logos, icons, etc.
@@ -83,8 +81,10 @@ Create `src/environments/environment.ts`:
 
 ```ts
 export const environment = {
-  production: false,
-  apiBaseUrl: 'http://localhost:8000' // FastAPI backend
+
+    production: false,
+    api_url : 'https://document-management-and-application.onrender.com/'
+    
 };
 ```
 
