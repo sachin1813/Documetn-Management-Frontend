@@ -133,3 +133,13 @@ Include screenshots of:
 - [ ] File preview support (PDF, images)
 
 ---
+
+```bash
+git clone git@github.com:sachin1813/Documetn-Management-Frontend.git
+cd doc-mgmt-system
+ng build --configuration production --base-href /docMgmt/
+```
+- ✅ cd dist #build is available that can be deployed on any instance
+
+- Nginx : have the path of the project directory in that directory implement the build of the project 
+
